@@ -1,0 +1,203 @@
+<ion-view view-title="" ng-init="getAllReviewProfiles()">
+    
+    <ion-content ng-class="{expanded:isExpanded}" class="animate-fade-slide-in">
+        <!-- <br><br>
+        <button class="button button-balanced ink pull-right" ui-sref="app.rev-profile">
+            See More
+        </button>
+        <h3>Categories</h3> 
+        
+        <div class="row ">
+        <button class="button button-calm col col-25 ink">
+            button-light
+        </button>
+        <button class="button button-balanced col col-25 ink">
+            button-light
+        </button>
+        <button class="button button-positive col col-25 ink">
+            button-light
+        </button>
+        <button class="button button-energized col col-25 ink">
+            button-light
+        </button>
+        </div>
+        <br><br>
+        <div class="row">
+        <button class="button button-assertive col col-25 ink">
+            button-light
+        </button>
+        <button class="button button-royal col col-25 ink">
+            button-light
+        </button>
+        <button class="button button-dark col col-25 ink">
+            button-light
+        </button>
+        </div> --><!-- end row -->
+
+
+        <!-- <button class="button button-balanced ink pull-right">
+            See More
+        </button>
+        <h3>Popular in your Area</h3>
+        <div class="row ">
+        <div class="item card-item col col-25">
+            <div ui-sref="app.gallery" class="card stable-bg ink ink-dark">
+                <div class="item item-avatar item-text-wrap">
+                    <span class="avatar" style="background-image: url('img/jon-snow.jpg');"></span>
+                    <strong>Jon Snow1</strong> knows nothing.
+                    <div class="card-footer text-right">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="item card-item col col-25">
+            <div ui-sref="app.gallery" class="card stable-bg ink ink-dark">
+                <div class="item item-avatar item-text-wrap">
+                    <span class="avatar" style="background-image: url('img/jon-snow.jpg');"></span>
+                    <strong>Jon Snow</strong> knows nothing.
+                    <div class="card-footer text-right">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="item card-item col col-25">
+            <div ui-sref="app.gallery" class="card stable-bg ink ink-dark">
+                <div class="item item-avatar item-text-wrap">
+                    <span class="avatar" style="background-image: url('img/jon-snow.jpg');"></span>
+                    <strong>Jon Snow</strong> knows nothing.
+                    <div class="card-footer text-right">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="item card-item col col-25">
+            <div ui-sref="app.gallery" class="card stable-bg ink ink-dark">
+                <div class="item item-avatar item-text-wrap">
+                    <span class="avatar" style="background-image: url('img/jon-snow.jpg');"></span>
+                    <strong>Jon Snow</strong> knows nothing.
+                    <div class="card-footer text-right">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        </div> --><!-- end row -->
+
+        <!-- <button class="button button-balanced ink pull-right">
+            See More
+        </button>
+        <h3>Recommended for you</h3>
+        <div class="row ">
+        <div class="item card-item col col-25">
+            <div ui-sref="app.gallery" class="card stable-bg ink ink-dark">
+                <div class="item item-avatar item-text-wrap">
+                    <span class="avatar" style="background-image: url('img/jon-snow.jpg');"></span>
+                    <strong>Jon Snow1</strong> knows nothing.
+                    <div class="card-footer text-right">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="item card-item col col-25">
+            <div ui-sref="app.gallery" class="card stable-bg ink ink-dark">
+                <div class="item item-avatar item-text-wrap">
+                    <span class="avatar" style="background-image: url('img/jon-snow.jpg');"></span>
+                    <strong>Jon Snow</strong> knows nothing.
+                    <div class="card-footer text-right">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="item card-item col col-25">
+            <div ui-sref="app.gallery" class="card stable-bg ink ink-dark">
+                <div class="item item-avatar item-text-wrap">
+                    <span class="avatar" style="background-image: url('img/jon-snow.jpg');"></span>
+                    <strong>Jon Snow</strong> knows nothing.
+                    <div class="card-footer text-right">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="item card-item col col-25">
+            <div ui-sref="app.gallery" class="card stable-bg ink ink-dark">
+                <div class="item item-avatar item-text-wrap">
+                    <span class="avatar" style="background-image: url('img/jon-snow.jpg');"></span>
+                    <strong>Jon Snow</strong> knows nothing.
+                    <div class="card-footer text-right">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        </div> --><!-- end row -->
+
+        <!-- <button class="button button-balanced ink pull-right">
+            See More
+        </button> --> 
+        <!-- <input type="search" class="form-control" placeholder="Search" id="from" ng-model="query"  autocomplete/> -->
+        
+
+        <!-- <h3>All rev profiles</h3> -->
+        <!-- <div ng-repeat="reviewprofile in allprofiles | filter:query">
+               <div class="list" >
+                  <div class="item card-item">
+                    <div ng-click="getReviewProfile(reviewprofile._id)" class="card stable-bg ink ink-dark">
+                        <div class="item item-avatar item-text-wrap">
+                            <span class="avatar"></span>
+                            <strong>{{reviewprofile.name}}</strong>
+                            <p>{{reviewprofile.description}}</p>
+                            <div class="card-footer text-right">
+                                <i class="icon ion-chatbubbles positive"></i> 6
+                                <i class="icon ion-heart assertive"></i> 23
+                                <div class="pull-left">
+                                    <i class="icon ion-clock"></i> just now
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div> -->
+ 
+        <div ng-repeat="reviewprofile in allprofiles | nameFilter: listprofiles.searchQuery">
+
+        <div class="list card" ng-click="getReviewProfile(reviewprofile._id)">
+            <div class="card-item">
+                <div class="item-avatar item-text-wrap">
+                    <span class="avatar"></span>
+                    <strong>{{reviewprofile.name}}</strong>
+                    <p>{{reviewprofile.description}}</p>
+                    <div class="card-footer text-right">
+                        <i class="icon ion-chatbubbles positive"></i> 6
+                        <i class="icon ion-heart assertive"></i> 23
+                        <div class="pull-left">
+                            <i class="icon ion-clock"></i> just now
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+   
+            
+            
+            
+            
+        </div>
+        
+
+    </ion-content>
+</ion-view>

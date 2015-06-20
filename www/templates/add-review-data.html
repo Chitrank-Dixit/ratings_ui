@@ -1,0 +1,51 @@
+<ion-view view-title="Attention">
+    <ion-content ng-class="{expanded:$scope.isExpanded}">
+        <h1 align="center">Add Profile</h1>
+        <p align="center"> profile of shops, products and services</p>
+        <!-- <div class="hero no-header flat">
+            <div class="content">
+                <div class="app-icon"></div>
+                <h1>Ratings </h1>
+            </div>
+        </div> -->
+        <div class="list">
+          <label class="item item-input item-floating-label">
+            <span class="input-label">Name</span>
+            <input type="text" placeholder="Name of the Product, shop or service" ng-model="revprofile.name" required>
+          </label>
+          
+          <label class="item item-input item-floating-label">
+            <span class="input-label">Description</span>
+            
+            <textarea placeholder="Description" rows="3" ng-model="revprofile.description"  name="description" required></textarea>
+          </label>
+          <label class="item item-input item-floating-label">
+            <span class="input-label">Category</span>
+            <input type="text" placeholder="Category" ng-model="revprofile.category" required>
+          </label>
+          <label class="item item-input item-floating-label">
+            <span class="input-label">Author</span>
+            <input type="text" placeholder="Author" ng-model="revprofile.author" required>
+          </label>
+          <li class="item item-checkbox">
+             <label class="checkbox">
+               <input type="checkbox" required>
+             </label>
+             Agree with Terms and Conditions
+          </li>
+          
+        
+        <div class="padding">
+            <button ng-click="createReviewProfile()" class="button button-full button-assertive ink">Add Review Profile</button>
+        </div>
+            
+        </div>
+
+    </ion-content>
+</ion-view>
+
+
+
+
+
+        

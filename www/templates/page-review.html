@@ -1,0 +1,57 @@
+<ion-view view-title="Attention" ng-init="userreviews(getRevProfileSpecificData('_id'))">
+    <ion-content ng-class="{expanded:$scope.isExpanded}">
+        <div class="hero slide-up" style="">
+            <div class="content">
+                <div class="avatar" style="">
+
+                </div>
+                <h1><a class="dark">{{getRevProfileSpecificData('name')}}</a></h1>
+                
+            </div>
+        </div>
+        <ul class="row static">
+            <li class="col col-25">
+                <i class="icon ion-eye"></i><br> Views <br>
+                2306
+            </li>
+            <li class="col col-25">
+                <i class="icon ion-star"></i><br> Avg Rating <br>
+                4/5
+            </li>
+            <li class="col col-25">
+                <i class="icon ion-information-circled"></i><br> Category <br>
+                Food Products
+            </li>
+            <li class="col col-25">
+                <i class="icon ion-ios-copy"></i><br> Similar <br>
+            </li>
+        </ul>
+        <h2 class="content padding double-padding-x">Description</h2>
+        <p>{{getRevProfileSpecificData('description')}}</p>
+
+        
+        <button ng-click="review()" class="button button-balanced ink">
+        Add Review
+        </button><!-- if not reviewed add your review -->
+        <!-- <p>Your Review</p> --> <!-- if reviewed view your review -->
+
+        <h2 class="content padding double-padding-x">Reviews</h2> <!-- all users who have reviewed so far -->
+
+                
+        <div class="list" ng-repeat="userreview in allreviews">
+            
+            <rating ng-model="userreview.rating" readonly="true"></rating>
+
+            <a ui-sref="app.friends" class="item item-avatar item-icon-right">
+                <img src="http://placehold.it/40x40">
+                <p ng-click="">Name</p>
+                <h3>{{userreview.title}}</h3>
+                <p>{{userreview.rating}}</p>
+                <p>{{userreview.description}}</p>
+                                
+                
+            </a>
+            
+        </div>
+    </ion-content>
+</ion-view>

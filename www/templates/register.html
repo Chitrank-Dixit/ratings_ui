@@ -1,0 +1,48 @@
+<ion-view view-title="Register" align-title="left">
+    <ion-content style="background-image: '../img/Logo.png';">
+        <h1 align="center">Register on Ratings</h1>
+        <!-- <div class="hero no-header flat">
+            <div class="content">
+                <div class="app-icon"></div>
+                <h1>Ratings </h1>
+            </div>
+        </div> -->
+        <div class="list">
+          <label class="item item-input item-floating-label">
+            <span class="input-label">Full Name</span>
+            <input type="text" placeholder="Full Name" ng-model="user.name" ng-required="true">
+          </label>
+          <label class="item item-input item-floating-label">
+            <span class="input-label">Email</span>
+            <input type="email" placeholder="Email" ng-model="user.email" ng-required="true">
+          </label>
+          <label class="item item-input item-floating-label">
+            <span class="input-label">Password</span>
+            <input type="password" placeholder="Password" ng-model="user.password" ng-required="true">
+          </label>
+          <label class="item item-input item-floating-label">
+            <span class="input-label">Confirm Password</span>
+            <input type="password" placeholder="Confirm Password" ng-model="user.cpassword" ng-required="true">
+          </label>
+          <li class="item item-checkbox">
+             <label class="checkbox">
+               <input type="checkbox" ng-required="true">
+             </label>
+             Agree with Terms and Conditions
+          </li>
+          
+        
+        <div class="padding">
+            <button ng-click="createUser()" class="button button-full button-assertive ink">Register</button>
+        </div>
+            Already Registered ? <button class="button button-clear button-positive ink" ui-sref="app.login">Log In</button>
+        </div>
+
+        <h2> Or </h2>
+        <div class="button-bar social-login">
+            <button class="button button-small button-border icon-left ion-social-google button-assertive-900 ink">Google+</button>
+            <button class="button button-small button-border icon-left ion-social-twitter button-calm-900 ink">Twitter</button>
+            <button class="button button-small button-border icon-left ion-social-facebook button-positive-900 ink">Facebook</button>
+        </div>
+    </ion-content>
+</ion-view>

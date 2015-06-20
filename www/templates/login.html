@@ -1,0 +1,35 @@
+<ion-view view-title="Login" align-title="left">
+    <ion-content style="background-color: ##C9BFC6">
+        <div class="hero no-header flat">
+            <div class="content">
+                <div class="app-icon"></div>
+                <h1>Ratings </h1>
+            </div>
+        </div>
+        <div class="list">
+          <label class="item item-input item-floating-label" ng-class="{ 'has-error' : signinForm.username.$invalid}">
+            <span class="input-label">Email</span>
+            <input type="email" placeholder="Email" ng-model="user.email" ng-minlength="1" required>
+          </label>
+          <label class="item item-input item-floating-label">
+            <span class="input-label">Password</span>
+            <input type="password" placeholder="Password" ng-model="user.password" required>
+          </label>
+          
+        
+        <div class="padding">
+            <button ng-click="validateUser()" class="button button-full button-assertive ink">Login</button>
+        </div>
+            Not Registered ? <button class="button button-clear button-positive ink" ui-sref="app.register">Register</button>
+            <br>
+            
+        </div>
+
+        <h2> Or </h2>
+        <div class="button-bar social-login">
+            <button class="button button-small button-border icon-left ion-social-google button-assertive-900 ink">Google+</button>
+            <button class="button button-small button-border icon-left ion-social-twitter button-calm-900 ink">Twitter</button>
+            <button class="button button-small button-border icon-left ion-social-facebook button-positive-900 ink">Facebook</button>
+        </div>
+    </ion-content>
+</ion-view>

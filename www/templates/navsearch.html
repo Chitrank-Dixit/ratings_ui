@@ -1,0 +1,32 @@
+<ion-view view-title="Home" >
+    <ion-content ng-class="{expanded:isExpanded}" class="animate-fade-slide-in">
+        
+        <button class="button button-balanced ink pull-right">
+            See More
+        </button> 
+        <!-- <h3>All rev profiles</h3> -->
+        
+        <div class="list" ng-repeat="reviewprofile in revprofilesdata">
+          <div class="item card-item col">
+            <div ng-click="getReviewProfile(reviewprofile._id)" class="card stable-bg ink ink-dark">
+                <div class="item item-avatar item-text-wrap">
+                    <span class="avatar" style="background-image: url('img/jon-snow.jpg');"></span>
+                    <strong>{{reviewprofile.name}}</strong>
+                    <p>{{reviewprofile.description}}</p>
+                    <div class="card-footer text-right">
+                        <i class="icon ion-chatbubbles positive"></i> 6
+                        <i class="icon ion-heart assertive"></i> 23
+                        <div class="pull-left">
+                            <i class="icon ion-clock"></i> just now
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div> 
+
+        
+        
+
+    </ion-content>
+</ion-view>

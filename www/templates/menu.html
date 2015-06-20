@@ -1,0 +1,101 @@
+<ion-side-menus enable-menu-with-back-views="true"> 
+    <ion-side-menu-content>
+        <ion-nav-bar class="bar-assertive-900" ng-class="{expanded: isExpanded, 'has-header-fab-left': hasHeaderFabLeft, 'has-header-fab-right': hasHeaderFabRight}" align-title="left">
+            <!-- <ion-nav-back-button class="no-text">
+            </ion-nav-back-button> -->
+            
+
+            
+
+            
+            
+            <ion-nav-buttons side="left">
+                <button class="button button-icon button-clear ion-android-menu" menu-toggle="left">
+                </button>
+
+                <div class="bar-header item-input-inset">
+                    
+
+                    <label class="item-input-wrapper" ng-hide="custom">
+                       <!--   -->
+                       <i class="icon ion-ios-search placeholder-icon"></i>
+                    <input type="search" class="form-control" placeholder="Search" id="from" data-ng-model="listprofiles.searchQuery" autocomplete/>
+                    </label>
+                
+                
+                <span ng-show="custom"></span>
+                </div>
+
+            </ion-nav-buttons>
+                
+            <ion-nav-buttons side="right">
+
+                <!-- <div class="bar bar-header item-input-inset" ng-if="hasFilters">
+                    <label class="item-input-wrapper textbox-search">
+                        <i class="icon ion-ios7-search placeholder-icon"></i>
+                        <input type="search" placeholder="Search">
+                    </label>
+
+                </div> -->
+                
+                <!-- <a data-tap-disabled="true" class=" button button-icon icon positive" ng-click="openFilters(hasFilters);" ng-class="{'ion-search':!hasFilters,'ion-close-circled':hasFilters}"></a> -->
+
+                
+                
+
+                <button class="button button-icon button-clear ion-android-search" ng-model="search" ng-click="toggleCustom()">
+                </button>
+                
+                
+                
+                
+                <button class="button button-icon button-clear ion-power" ng-show="getToken() != '' " ng-click="logout()" >
+                </button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        
+        <ion-nav-view name="fabContent"></ion-nav-view>
+        <ion-nav-view name="menuContent" ng-class="{expanded: isExpanded}" ></ion-nav-view>
+    </ion-side-menu-content>
+    <ion-side-menu side="left">
+        <ion-header-bar class="dark-bg expanded">
+            <span class="avatar" style="background: http://placehold.it/350x150; background-size: cover;"></span>
+            <!-- <h2>{{getSpecificUserdata('email')}}</h2> -->
+        </ion-header-bar>
+        <ion-content class="stable-bg has-expanded-header">
+            <ion-list>
+                <ion-item  class="ink" nav-clear menu-close ui-sref="app.home">
+                    <i class="ion-android-home"> Home</i>
+                </ion-item>
+                <ion-item  class="ink" nav-clear menu-close ui-sref="app.adddata">
+                    <i class="ion-android-add"> Add Rating Data</i>
+                </ion-item>
+                <ion-item class="ink" nav-clear menu-close ng-hide="$rootScope.getToken() != '' " ui-sref="app.login">
+                    Login
+                </ion-item>
+
+                <ion-item  class="ink" nav-clear menu-close ui-sref="app.profile">
+                    <i class="ion-android-person"> Profile</i>
+                </ion-item>
+                <ion-item  class="ink" nav-clear menu-close ui-sref="app.friends">
+                    <i class="ion-android-archive"> History</i>
+                </ion-item>
+                <ion-item  class="ink" nav-clear menu-close ui-sref="app.gallery">
+                    <i class="ion-android-settings"> Settings</i>
+                </ion-item>
+                <ion-item  class="ink" nav-clear menu-close ui-sref="app.gallery">
+                    <i class="ion-help-circled"> Help</i>
+                </ion-item>
+                <ion-item  class="ink" nav-clear menu-close ui-sref="app.gallery">
+                    <i class="ion-clipboard"> Feedback</i>
+                </ion-item>
+                <ion-item  class="ink" nav-clear menu-close ng-show="$rootScope.getToken() != '' " ng-click="logout()" >
+                    <i class="ion-power"> Logout</i>
+                </ion-item>
+                <ion-item  class="ink" nav-clear menu-close ui-sref="app.developer">
+                    <i class="icon ion-information-circled"> Developed by</i>
+                </ion-item>
+            </ion-list>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>
